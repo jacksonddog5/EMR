@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+  <h3 class="w3-bar-item">Patient</h3>
+  <img src="https://gilbertexperience.com/wp-content/uploads/2016/11/Blank-Headshot.jpg.webp"
+  width="100" 
+     height="100"
+      >
+      
+      <p> Mr. Sweet <p>
+      <p> 63 y/o <p>
+      <p> Male <p>
+          <p> Ht: 6' <p>
+              <p> Wt: 100 kg <p>
+      
+</div>
+
+<!-- Page Content -->
+<div style="margin-left:25%">
+
+<div class="w3-container w3-teal">
+  <h1>Wildcat EMR</h1>
+</div>
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: white;}
+#News {background-color: white;}
+#Contact {background-color: white;}
+#About {background-color: white;}
+</style>
+</head>
+
+
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'green')">Summary</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">Notes</button>
+
+
+<div id="Home" class="tabcontent">
+  
+  <p style="color:black"> 63M brought to ED. He is unconscious and accompanied by his wife. She reports he has been in good health until approximately a week prior when he experienced insatiable thirst that he attempted to quench via large amounts of soda and beer. Also reported nocturia for several days, and diarrhea that began day prior to presentation. Went to bed normally but was unconscious this morning. Has not seen PCP in last six months. 
+ <br> <br>
+Social history: Employed regularly as a house painter; denies illicit drug use 
+
+ <br> <br>
+
+Family history: "Nothing significant"  
+
+ <br> <br>
+
+PE: Unconscious, acutely ill man. Exam notable for several focal right sided seizures; skin and mucous membranes are dry. Ocular globes soft.
+
+ <br> <br>
+
+VS: T 37.5, HR 120, BP 98/60, RR 30 (unlabored); Ht 6', Wt: 100KG 
+
+ <br> <br>
+Labs: WBC 21,30, H/H: 16.2/51 
+
+ <br> <br>
+
+ABG: 7.21/30/68/14/92/-5 
+
+ <br> <br>
+Na: 153 / K: 3.4 / Cl 102 / CO2 17/ BUN 68 / Cr. 2.3 / Glucose 1020 
+
+ <br> <br>
+
+UA: SG 1.03, pH 6, 4+ glucose, moderate ketones, trace protein, negative nitrite, 2 WBCs, negative leukoesterase 
+
+ <br> <br>
+
+CXR: Unremarkable; lung fields clear 
+ <br> <br>
+
+CT Head: Unremarkable 
+ <br> <br>
+EKG: Sinus tachycardia with non-specific ST-T wave changes </p>
+
+</div>
+
+<div id="News" class="tabcontent">
+     
+  <h3 style="color:black;">Notes</h3>
+   
+
+<textarea id="freeform" name="freeform" rows="4" cols="50">
+Enter text here...
+</textarea>
+</div>
+
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+
+
+
+</div>
+      
+</body>
+</html>
